@@ -282,7 +282,7 @@ figure{
 	color: #ffffff;
 	font-weight: 500;
 	padding: 15px 25px;
-	background: #1b1c1e;
+	background: #944801;
 	border-radius:0px;
 	outline: 1px solid transparent;
 	z-index:1;
@@ -294,7 +294,8 @@ figure{
 }
 
 .btn-style-one:hover .btn-title{
-	background: #1b1c1e;
+	text-decoration: none;
+	background: #b5835c;
 	outline-color: #ffffff;
 	outline-offset: -4px;
 	color: #ffffff;
@@ -505,7 +506,7 @@ img{
 	text-align:center;
 	z-index:100;
 	cursor:pointer;
-	background:#25283a;
+	background:#944801;
 	border-radius: 0px;
 	margin-left:-26px;
 	display:none;
@@ -517,7 +518,7 @@ img{
 }
 
 .scroll-to-top:hover{
-	background:#ff6000;
+	background:#b5835c;
 	color:#ffffff;
 	box-shadow:2px 2px 0px #25283a;
 }
@@ -2303,7 +2304,7 @@ img.lazy-image.loaded{
 .sec-title .lower-text{
 	position: relative;
 	display: block;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.7em;
 	font-weight: 400;
 	color: #9b9fa6;
@@ -4070,7 +4071,7 @@ img.lazy-image.loaded{
 }
 
 .newsletter-form .form-group .theme-btn .btn-title{
-	background: #303236;
+	background: #944801;
 }
 
 .main-footer .links-widget{
@@ -8077,7 +8078,7 @@ img.lazy-image.loaded{
 	height: 114px;
 	padding: 27px 10px;
 	text-align: center;
-	background: #1b1c1e;
+	background: #b5835c;
 	color: #ffffff;
 	font-size: 40px;
 	line-height: 60px;
@@ -8126,7 +8127,7 @@ img.lazy-image.loaded{
 
 .contact-section-two .form-box h3{
 	font-size: 36px;
-	text-transform: capitalize;
+	text-transform: none;
 	margin-bottom: 24px;
 }
 
