@@ -25,5 +25,14 @@ def gallery():
     return render_template('gallery.html')
 
 
+@app.route('/discount')
+def discount():
+    return render_template('discount.html')
+
+
+@app.route('/service')
+def service():
+    return render_template('service.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
