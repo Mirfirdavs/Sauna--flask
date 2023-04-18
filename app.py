@@ -1,8 +1,8 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, request, flash
 
 
 app = Flask(__name__)
-
+app.config['SECRET_KEY'] = 'fawheoilnfweaughsaweogihanfk'
 
 @app.route('/index')
 @app.route('/')
@@ -10,8 +10,20 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/contact')
+@app.route('/contact', methods = ['GET', 'POST'])
 def contact():
+    
+    if request.method =='POST':
+        #print(request.form)
+        
+        #Нужно добавить ещё критерии
+        
+        if len(request.form['username']) >= 2:
+            flash('Сообщение отправлено', category='success')
+        else:
+            flash('Ошибка отправки', category='error')
+        
+    
     return render_template('contact.html')
 
 
@@ -33,6 +45,12 @@ def discount():
 @app.route('/service')
 def service():
     return render_template('service.html')
+
+
+@app.errorhandler(404)
+def pageNotFound(error):
+    return render_template('page404.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)

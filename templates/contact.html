@@ -73,7 +73,10 @@
                             data-wow-duration="1500ms">
                             <h3>Есть какие-нибудь вопросы?</h3>
                             <div class="text">Пожалуйста, заполните данные ниже, а затем нажмите «Отправить», и мы свяжемся с вами.</div>
-                                <form>
+                                {% for cat, msg in get_flashed_messages( True ) %}
+                                    <div class="u-text flash {{ cat }}">{{ msg }}</div>
+                                {% endfor %}
+                                <form  method="post">
                                 <!--  <form method="post" action="sendemail.php" id="contact-form"></form> -->
                                     <div class="form-group">
                                         <div class="field-inner">
@@ -104,7 +107,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <button class="theme-btn btn-style-one"><span class="btn-title">Отправить
+                                        <button class="theme-btn btn-style-one" type="submit"><span class="btn-title">Отправить
                                         </span></button>
                                     </div>
                                 </form>
