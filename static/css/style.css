@@ -6472,6 +6472,7 @@ img.lazy-image.loaded{
 }
 
 .featured-section-four .image-column{
+	margin-top: 135px;
 	position: relative;
 	order: 0;
 	margin-bottom: 50px;
