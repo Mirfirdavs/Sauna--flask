@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <!-- Banner Section -->
+    <section class="page-banner">
+        <div class="image-layer" style="background-image: url(static/images/main-photo/kontakti.jpg);"></div>
+        <div class="banner-bottom-pattern"></div>
+
+        <div class="banner-inner">
+            <div class="auto-container">
+                <div class="inner-container clearfix">
+                    <h1>Контакты</h1>
+                    <div class="page-nav">
+                        <ul class="bread-crumb clearfix">
+                            <li><a href="/index">Главная</a></li>
+                            <li class="active">Контакты</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Banner Section -->
+
+    <!--Contact Section-->
+    <section class="contact-section-two">
+        <div class="auto-container clearfix">
+            <div class="row clearfix">
+
+                <div class="info-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="u-text">Связаться с нами очень просто! Мы всегда рады новым клиентам и ответим на все ваши вопросы.</div>
+
+                        <div class="info">
+                            <div class="info-block">
+                                <div class="block-inner">
+                                    <div class="icon-box wow zoomInStable" data-wow-delay="0ms" data-wow-duration="2000ms">
+                                        <span class="flaticon-placeholder-1"></span>
+                                    </div>
+                                    <h4>Адрес</h4>
+                                    <div class="text">Набережная реки Фонтанки 123/5, комната 331</div>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="block-inner">
+                                    <div class="icon-box wow zoomInStable" data-wow-delay="300ms"
+                                        data-wow-duration="2000ms"><span class="flaticon-technology-2"></span></div>
+                                    <h4>Телефон</h4>
+                                    <div class="text">
+                                        <a href="tel:(+48)564-334-21-22-34">+7 (999) 999 99 99</a> <br>
+                                        <a href="tel:(+48)564-334-21-25">+7 (999) 999 99 99</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-block">
+                                <div class="block-inner">
+                                    <div class="icon-box wow zoomInStable" data-wow-delay="600ms"
+                                        data-wow-duration="2000ms"><span class="flaticon-email-1"></span></div>
+                                    <h4>Наша почта</h4>
+                                    <div class="text">
+                                        <a href="mailto:info@hotera.com">info@sauna.com</a> <br>
+                                        <a href="mailto:info@example.com">info@example.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-col col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner">
+                        <div class="form-box default-form contact-form-two wow fadeInRight" data-wow-delay="0ms"
+                            data-wow-duration="1500ms">
+                            <h3>Хотите связаться с нами?</h3>
+                            <div class="text">Пожалуйста, заполните данные ниже, а затем нажмите «Отправить», и мы свяжемся с вами.</div>
+                                {% for cat, msg in get_flashed_messages( True ) %}
+                                    <div class="u-text flash {{ cat }}">{{ msg }}</div>
+                                {% endfor %}
+                                <form  method="post">
+                                <!--  <form method="post" action="sendemail.php" id="contact-form"></form> -->
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <input type="text" name="username" value="" placeholder="Ваше имя" required="">
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <input type="text" name="lastname" value="" placeholder="Last name" required="">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <input type="email" name="email" value="" placeholder="Email" required="">
+                                        </div>
+                                    </div>
+                                    -->
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <input type="text" name="phone" value="" placeholder="Телефон" required="">
+                                        </div>
+                                    </div>
+                                    <!--
+                                    <div class="form-group">
+                                        <div class="field-inner">
+                                            <textarea name="message" placeholder="Сообщение" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    -->
+                                    <div class="form-group">
+                                        <button class="theme-btn btn-style-one" type="submit"><span class="btn-title">Отправить
+                                        </span></button>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Map Section-->
+
+    <section class="map-section">
+        <div class="map-layer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.717108049623!2d30.30715591567632!3d59.92024217054503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630fead6af497%3A0xc516770bb55de9e!2z0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0KTQvtC90YLQsNC90LrQuCwgMTIzLzUsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTAwNjg!5e0!3m2!1sru!2sru!4v1680820962116!5m2!1sru!2sru" width="1500" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="map-canvas" data-zoom="12" data-lat="-37.817085" data-lng="144.955631" data-type="roadmap"
+                data-hue="#ffc400" data-title="Singapore" data-icon-path="static/images/icons/map-marker.png"
+                data-content="Singapore VIC 3000, USA<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
+            </div>
+        </div>
+    </section>
+
+
+    <!--End pagewrapper--><!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-up-arrow"></span></div>
+{% endblock %}

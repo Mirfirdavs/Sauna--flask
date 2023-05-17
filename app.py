@@ -26,6 +26,21 @@ def contact():
     
     return render_template('contact.html')
 
+@app.route('/contact_to_mail', methods = ['GET', 'POST'])
+def contact_to_mail():
+    
+    if request.method =='POST':
+        #print(request.form)
+        
+        #Нужно добавить ещё критерии
+        
+        if len(request.form['username']) >= 2:
+            flash('Сообщение отправлено', category='success')
+        else:
+            flash('Ошибка отправки', category='error')
+        
+    
+    return render_template('contact.html')
 
 @app.route('/about')
 def about():
