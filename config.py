@@ -1,2 +1,2 @@
-login = 'kalonovmir@yandex.ru'
-password = 'kalonov.m'
+login = 'banyatime-kuzmolovo@ya.ru'
+password = 'Banya01'
