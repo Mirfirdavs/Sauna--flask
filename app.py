@@ -70,7 +70,7 @@ def contact():
                     f'Имя клиента:   {username}\nТелефон:   {phone}\nСообщение:   {msg}\nДата:   {today.strftime("%d/%m/%Y")}'])
                 # Отправка сообщения в telegram https://t.me/+jF1xPhX46qgxYjMy
             else:
-                flash('Имя не может быть меньше 2 знаков', category='error')
+                flash('Ваше имя не может быть меньше 2 знаков', category='error')
         else:
             flash('Ваш номер не определен', category = 'error')
         
@@ -96,7 +96,7 @@ def contact_to_mail():
                     f'Имя клиента:   {username}\nТелефон:   {phone}\nДата:   {today.strftime("%d/%m/%Y")}'])
                 # Отправка сообщения в telegram https://t.me/+jF1xPhX46qgxYjMy
             else:
-                flash('Имя не может быть меньше 2 знаков', category='error')
+                flash('Ваше имя не может быть меньше 2 знаков', category='error')
         else:
             flash('Ваш номер не определен', category = 'error')
     return render_template('contact_to_mail.html')

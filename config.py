@@ -1,2 +1,2 @@
 login = 'banyatime-kuzmolovo@ya.ru'
-password = 'Banya01'
+password = 'liuuoeyczxqceqbu'
